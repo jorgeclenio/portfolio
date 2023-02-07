@@ -5,8 +5,15 @@
 html,
 body {
   height: 100%;
+  background-color: #242424;
 }
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.container-div-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
