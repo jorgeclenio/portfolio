@@ -4,19 +4,19 @@
     <div class="text-center container">
       <img
         src="./../../assets/img/img-color_black.png"
-        height="180"
-        width="180"
+        height="150"
+        width="150"
         style="border-radius: 50% !important"
         alt="profile-pic"
       />
       <h2 class="mt-3">{{ myName }}</h2>
       <p class="mt-3">
-        💻 Computer Engineer & Full Stack Developer 🤓 <br />
-        angular | asp.net | mongodb
+        {{ info }} <br />
+        {{ stack }}
       </p>
 
-      <div class="mt-3">
-        <a href="https://github.com/jorgeclenio">
+      <div class="mt-3 mb-3">
+        <a href="https://github.com/jorgeclenio" target="_blank">
           <button
             type="button"
             class="btn btn-outline-secondary text-decoration-download-btn"
@@ -26,7 +26,7 @@
           </button>
         </a>
         <a
-          style="margin-left: 10px"
+          class="ms-3"
           href="./../../assets/docs/cv_jorgeclenio2023_pt-br.pdf"
           download="cv_jorgeclenio2023_pt-br.pdf"
         >
@@ -38,7 +38,11 @@
             Currículo
           </button>
         </a>
-        <a style="margin-left: 10px" href="https://www.linkedin.com/in/jrgcln/">
+        <a
+          class="ms-3"
+          href="https://www.linkedin.com/in/jrgcln/"
+          target="_blank"
+        >
           <button
             type="button"
             class="btn btn-outline-secondary text-decoration-download-btn"
