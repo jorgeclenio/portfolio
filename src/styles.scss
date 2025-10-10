@@ -4,6 +4,17 @@
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
 
+/* Theme tokens (default: dark) */
+:root {
+  --bg-color: #212529;
+  --text-color: #f8f9fa;
+}
+
+[data-theme="light"] {
+  --bg-color: #f8f9fa; /* Bootstrap light gray */
+  --text-color: #212529; /* Bootstrap body color */
+}
+
 html {
   overflow-y: hidden;
   overflow-x: hidden;
@@ -11,8 +22,9 @@ html {
 
 body {
   margin: 0rem;
-  color: #fffafa !important;
-  background-color: #121212 !important;
+  color: var(--text-color) !important;
+  background-color: var(--bg-color) !important;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .text-decoration-download-btn {
