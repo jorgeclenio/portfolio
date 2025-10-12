@@ -6,13 +6,13 @@
 
 /* Theme tokens (default: dark) */
 :root {
-  --bg-color: #212529;
+  --bg-color: #070707;
   --text-color: #f8f9fa;
 }
 
 [data-theme="light"] {
   --bg-color: #f8f9fa; /* Bootstrap light gray */
-  --text-color: #212529; /* Bootstrap body color */
+  --text-color: #070707; /* Bootstrap body color */
 }
 
 html {
