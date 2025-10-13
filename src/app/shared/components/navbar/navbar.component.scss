@@ -1,0 +1,29 @@
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: var(--bg-color);
+  transition: background-color 0.2s ease;
+
+  ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0 1rem;
+
+      a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-weight: normal;
+        transition: color 0.2s ease;
+
+        &.active {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

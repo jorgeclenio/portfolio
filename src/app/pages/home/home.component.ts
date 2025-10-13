@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  public myName: string = '{ 𝙹𝙾𝚁𝙶𝙴 𝙲𝙻𝙴𝙽𝙸𝙾 }';
+  public name: string = '{ 𝙹𝙾𝚁𝙶𝙴 𝙲𝙻𝙴𝙽𝙸𝙾 }';
   public info: string = 'Computer Engineer & Full Stack Developer';
-  public stack: string = 'angular | nodejs | sql';
+  public stack: string = 'Angular | SQL | NodeJS ';
 }
