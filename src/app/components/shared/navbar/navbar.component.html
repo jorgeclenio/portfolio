@@ -1,0 +1,33 @@
+<header class="border-b border-border/80 bg-bg/80 backdrop-blur">
+  <nav
+    class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3"
+    aria-label="Principal"
+  >
+    <a
+      routerLink="/"
+      class="flex items-center gap-2 text-fg no-underline transition-opacity hover:opacity-90"
+    >
+      <span
+        class="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-bg text-sm font-bold text-primary"
+        aria-hidden="true"
+        >JC</span
+      >
+      <span class="text-sm font-semibold tracking-tight sm:text-base">Portfolio</span>
+    </a>
+    <div class="flex items-center gap-1 sm:gap-4">
+      <a
+        routerLink="/"
+        routerLinkActive="text-primary"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="rounded-md px-3 py-2 text-sm font-medium text-muted no-underline transition-colors hover:bg-border/40 hover:text-fg"
+        >{{ language.messages().navInicio }}</a
+      >
+      <a
+        routerLink="/projetos"
+        routerLinkActive="text-primary"
+        class="rounded-md px-3 py-2 text-sm font-medium text-muted no-underline transition-colors hover:bg-border/40 hover:text-fg"
+        >{{ language.messages().navProjetos }}</a
+      >
+    </div>
+  </nav>
+</header>

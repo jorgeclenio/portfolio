@@ -1,1 +1,11 @@
-<p>not-found works!</p>
+<div class="flex flex-1 flex-col items-center justify-center gap-6 px-4 py-16 text-center">
+  <p class="text-6xl font-bold tabular-nums text-primary" aria-hidden="true">404</p>
+  <h1 class="text-xl font-semibold text-fg sm:text-2xl">
+    {{ language.messages().notFoundTitle }}
+  </h1>
+  <a
+    routerLink="/"
+    class="rounded-md border border-border bg-bg px-4 py-2 text-sm font-medium text-fg no-underline shadow-sm transition-colors hover:border-primary/50 hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+    >{{ language.messages().notFoundBack }}</a
+  >
+</div>

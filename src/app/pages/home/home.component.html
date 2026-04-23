@@ -1,41 +1,8 @@
-<!-- <app-navbar></app-navbar> -->
-<div class="container d-flex justify-content-center min-vh-100">
-  <div class="row align-items-center">
-    <div class="col text-center">
-      <h2 class="mt-3">{{ name }}</h2>
-      <p class="mt-3">
-        {{ info }} <br />
-        {{ stack }}
-      </p>
-
-      <div
-        class="mt-3 mb-3 d-flex justify-content-center align-items-center gap-3 flex-wrap"
-      >
-        <a
-          class="btn btn-outline-secondary border-0"
-          href="https://github.com/jorgeclenio"
-          target="_blank"
-          aria-label="GitHub"
-        >
-          <i class="bi bi-github icon-size"></i>
-        </a>
-        <a
-          class="btn btn-outline-secondary border-0"
-          href="https://drive.google.com/file/d/12hLUToYVJa8hntqrRusiCIwk788Gg_O_/view"
-          target="_blank"
-          aria-label="Download Curriculo"
-        >
-          <i class="bi bi-cloud-arrow-down-fill icon-size"></i>
-        </a>
-        <a
-          class="btn btn-outline-secondary border-0"
-          href="https://www.linkedin.com/in/jrgcln/"
-          target="_blank"
-          aria-label="LinkedIn"
-        >
-          <i class="bi bi-linkedin icon-size"></i>
-        </a>
-      </div>
-    </div>
-  </div>
+<div class="flex flex-1 flex-col items-center justify-center px-4 py-16 text-center">
+  <h1 class="text-3xl font-semibold tracking-tight text-fg sm:text-4xl">
+    {{ language.messages().homeTitle }}
+  </h1>
+  <p class="mt-3 max-w-md text-sm text-muted sm:text-base">
+    {{ language.messages().homeSubtitle }}
+  </p>
 </div>

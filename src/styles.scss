@@ -1,28 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/dist/css/bootstrap.min.css";
-@import "~bootstrap-icons/font/bootstrap-icons.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
-
-/* Theme tokens (default: dark) */
+/* Tokens de tema (light/dark) via CSS variables.
+   Para ativar o dark mode, adicione a classe `dark` no <html>. */
 :root {
-  --bg-color: #2e2e2e;
-  --text-color: #ecedee;
+  --color-bg: 255 255 255;
+  --color-fg: 17 24 39;
+  --color-muted: 107 114 128;
+  --color-border: 229 231 235;
+  --color-primary: 239 68 68;
 }
 
-[data-theme="light"] {
-  --bg-color: #ecedee; /* Bootstrap light gray */
-  --text-color: #2e2e2e; /* Bootstrap body color */
+html.dark {
+  /* Base #212121 */
+  --color-bg: 33 33 33;
+  --color-fg: 238 238 238;
+  --color-muted: 163 163 163;
+  --color-border: 56 56 56;
+  --color-primary: 248 113 113;
 }
 
-html {
-  overflow-y: hidden;
-  overflow-x: hidden;
+html,
+body {
+  height: 100%;
 }
 
 body {
-  margin: 0rem;
-  color: var(--text-color) !important;
-  background-color: var(--bg-color) !important;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  margin: 0;
+  background-color: rgb(var(--color-bg));
+  color: rgb(var(--color-fg));
 }

@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-home',
+  host: { class: 'flex min-h-0 flex-1 flex-col' },
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  public name: string = '{ 𝙹𝙾𝚁𝙶𝙴 𝙲𝙻𝙴𝙽𝙸𝙾 }';
-  public info: string = 'Computer Engineer & Full Stack Developer';
-  public stack: string = 'Angular | SQL | NodeJS ';
+  protected readonly language = inject(LanguageService);
 }
