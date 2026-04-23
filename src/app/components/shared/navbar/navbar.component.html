@@ -1,14 +1,14 @@
 <header class="border-b border-border/80 bg-bg/80 backdrop-blur">
   <nav
-    class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3"
+    class="mx-auto flex max-w-5xl items-center justify-between gap-[calc(1rem*1.15)] px-4 py-[calc(0.75rem*1.15)]"
     aria-label="Principal"
   >
     <a
-      routerLink="/"
+      routerLink="/home"
       class="flex items-center gap-2 text-fg no-underline transition-opacity hover:opacity-90"
     >
       <span
-        class="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-bg text-sm font-bold text-primary"
+        class="flex h-[calc(2.25rem*1.15)] w-[calc(2.25rem*1.15)] items-center justify-center rounded-lg border border-border bg-bg text-sm font-bold text-primary"
         aria-hidden="true"
         >JC</span
       >
@@ -16,16 +16,16 @@
     </a>
     <div class="flex items-center gap-1 sm:gap-4">
       <a
-        routerLink="/"
+        routerLink="/home"
         routerLinkActive="text-primary"
         [routerLinkActiveOptions]="{ exact: true }"
-        class="rounded-md px-3 py-2 text-sm font-medium text-muted no-underline transition-colors hover:bg-border/40 hover:text-fg"
+        class="rounded-md px-[calc(0.75rem*1.15)] py-[calc(0.5rem*1.15)] text-sm font-medium text-muted no-underline transition-colors hover:bg-border/40 hover:text-fg"
         >{{ language.messages().navInicio }}</a
       >
       <a
         routerLink="/projetos"
         routerLinkActive="text-primary"
-        class="rounded-md px-3 py-2 text-sm font-medium text-muted no-underline transition-colors hover:bg-border/40 hover:text-fg"
+        class="rounded-md px-[calc(0.75rem*1.15)] py-[calc(0.5rem*1.15)] text-sm font-medium text-muted no-underline transition-colors hover:bg-border/40 hover:text-fg"
         >{{ language.messages().navProjetos }}</a
       >
     </div>

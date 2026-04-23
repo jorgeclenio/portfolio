@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    @apply font-sans antialiased;
+  }
+}
+
 /* Tokens de tema (light/dark) via CSS variables.
    Para ativar o dark mode, adicione a classe `dark` no <html>. */
 :root {

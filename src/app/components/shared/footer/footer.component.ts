@@ -13,9 +13,8 @@ export class FooterComponent {
 
   protected readonly githubHref = 'https://github.com/jorgeclenio/';
 
-  protected onLocaleChange(event: Event): void {
-    const value = (event.target as HTMLSelectElement).value as AppLocale;
-    this.language.setLocale(value);
+  protected setLocale(locale: AppLocale): void {
+    this.language.setLocale(locale);
   }
 
   protected setTheme(mode: ThemeMode): void {

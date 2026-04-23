@@ -1,7 +1,7 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Injectable, PLATFORM_ID, computed, inject, signal } from '@angular/core';
 
-export type AppLocale = 'pt-BR' | 'en';
+export type AppLocale = 'pt-BR' | 'en' | 'es';
 
 const STORAGE_KEY = 'portfolio-lang';
 
@@ -10,6 +10,9 @@ export interface AppStrings {
   navProjetos: string;
   footerBuiltBy: string;
   footerLangLabel: string;
+  footerLangPortuguese: string;
+  footerLangEnglish: string;
+  footerLangSpanish: string;
   themeDefault: string;
   themeLight: string;
   themeDark: string;
@@ -28,6 +31,9 @@ const STRINGS: Record<AppLocale, AppStrings> = {
     navProjetos: 'Projetos',
     footerBuiltBy: 'por @jorgeclenio',
     footerLangLabel: 'Idioma',
+    footerLangPortuguese: 'Português (Brasil)',
+    footerLangEnglish: 'Inglês',
+    footerLangSpanish: 'Espanhol',
     themeDefault: 'Tema do sistema',
     themeLight: 'Tema claro',
     themeDark: 'Tema escuro',
@@ -44,6 +50,9 @@ const STRINGS: Record<AppLocale, AppStrings> = {
     navProjetos: 'Projects',
     footerBuiltBy: 'built by @jorgeclenio',
     footerLangLabel: 'Language',
+    footerLangPortuguese: 'Portuguese (Brazil)',
+    footerLangEnglish: 'English',
+    footerLangSpanish: 'Spanish',
     themeDefault: 'System theme',
     themeLight: 'Light theme',
     themeDark: 'Dark theme',
@@ -54,6 +63,25 @@ const STRINGS: Record<AppLocale, AppStrings> = {
     projectsSubtitle: 'Coming soon.',
     notFoundTitle: 'Page not found',
     notFoundBack: 'Back to home',
+  },
+  es: {
+    navInicio: 'Inicio',
+    navProjetos: 'Proyectos',
+    footerBuiltBy: 'por @jorgeclenio',
+    footerLangLabel: 'Idioma',
+    footerLangPortuguese: 'Portugués (Brasil)',
+    footerLangEnglish: 'Inglés',
+    footerLangSpanish: 'Español',
+    themeDefault: 'Tema del sistema',
+    themeLight: 'Tema claro',
+    themeDark: 'Tema oscuro',
+    themeGroup: 'Selección de tema',
+    homeTitle: 'Portafolio',
+    homeSubtitle: 'Contenido principal de la aplicación.',
+    projectsTitle: 'Proyectos',
+    projectsSubtitle: 'Próximamente.',
+    notFoundTitle: 'Página no encontrada',
+    notFoundBack: 'Volver al inicio',
   },
 };
 
@@ -84,7 +112,7 @@ export class LanguageService {
     if (!isPlatformBrowser(this.platformId)) return 'pt-BR';
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
-      if (raw === 'en' || raw === 'pt-BR') return raw;
+      if (raw === 'en' || raw === 'pt-BR' || raw === 'es') return raw;
     } catch {
       /* ignore */
     }
